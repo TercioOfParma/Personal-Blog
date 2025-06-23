@@ -6,3 +6,7 @@ theme = 'ananke'
 		title = "Elliot Lake"
 		weight = 1
 		contentDir = "content"
+		
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

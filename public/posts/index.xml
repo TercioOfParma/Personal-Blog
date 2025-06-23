@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Elliot Lake</title>
-    <link>//localhost:1313/</link>
-    <description>Recent content on Elliot Lake</description>
+    <title>Posts on Elliot Lake</title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content in Posts on Elliot Lake</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 23 Jun 2025 16:11:48 +0100</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>5 Months of Professional AI Development : A Retrospective</title>
       <link>//localhost:1313/posts/retrospective-ai-2025/</link>
