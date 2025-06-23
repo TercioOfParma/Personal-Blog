@@ -1,0 +1,8 @@
+theme = 'ananke'
+
+
+[languages]
+	[languages.en]
+		title = "Elliot Lake"
+		weight = 1
+		contentDir = "content"
