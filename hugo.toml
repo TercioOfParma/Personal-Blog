@@ -1,5 +1,5 @@
 theme = 'ananke'
-
+baseURL = "https://tercioofparma.github.io/"
 
 [languages]
 	[languages.en]
