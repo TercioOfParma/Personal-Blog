@@ -1,5 +1,6 @@
 theme = 'ananke'
-baseURL = "https://tercioofparma.github.io/"
+baseURL = "elliotlake.xyz"
+relativeURLs = true
 
 [languages]
 	[languages.en]
@@ -10,3 +11,5 @@ baseURL = "https://tercioofparma.github.io/"
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+    
+  
