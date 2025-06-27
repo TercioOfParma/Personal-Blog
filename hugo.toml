@@ -1,4 +1,4 @@
-theme = 'ananke'
+theme = 'paper'
 baseURL = "elliotlake.xyz"
 relativeURLs = true
 
@@ -12,4 +12,12 @@ relativeURLs = true
   [caches.images]
     dir = ':cacheDir/images'
     
+  [params]
+  
+  github = 'TercioOfParma'
+  linkedin='elliot-lake-016360132'
+  avatar='https://avatars.githubusercontent.com/u/4673758?v=4'
+  name='Elliot Lake'
+  rss=true
+  bio='Software Developer in the UK interested in Web, Mobile and Systems Development.' 
   

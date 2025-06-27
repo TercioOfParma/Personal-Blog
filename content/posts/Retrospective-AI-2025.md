@@ -6,8 +6,6 @@ featured_image: ""
 description: "A short debrief on developing with LLMs, Neural Networks and Spacy"
 ---
 
-# 8 Months of Professional AI Development : A Retrospective
-
 At my current workplace, which is critical national infrastructure in the UK, we have been investigating possible uses for LLMs and other AI systems. As a developer with a Graduate Degree in the subject, I have been assigned to investigate possible use cases for the business since the end of January[^1] this year. Throughout this process, and a not negligible amount of development with LLMs on the side, I have been increasingly less and less convinced by LLMs as something useful outside of very specific contexts, but that they're not completely useless. In particular, I have found working with local LLMs to be a disappointing experience. This may be surprising to some readers, but I have found writing software systems with LLMs as an integral part of their operation to be a generally frustrating experience, even after implementing Prompt Engineering techniques suggested by figures such as Andrew Ng. 
 
 In the interest of conveying information that I think will be less likely known to the reader quickly, I will start by enumerating considerations that I think are less likely to have been addressed explicitly in other places. From there, I'll go through ones that people are much more likely to know but I feel are an important part of the retrospective. Finally, I'll enumerate a list of use cases where I think that LLMs work and don't work and explain how I reached my conclusions. 

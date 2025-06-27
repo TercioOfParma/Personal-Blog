@@ -1,148 +1,265 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>5 Months of Professional AI Development : A Retrospective | Elliot Lake</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="A short debrief on developing with LLMs, Neural Networks and Spacy">
-    <meta name="generator" content="Hugo 0.147.9">
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
-    
-
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<!doctype html>
 
 
 
 
-    
 
 
-    
-      
 
-    
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en"
+  dir="ltr"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
 
-    
-
-    
-      <link rel="canonical" href="//localhost:1313/posts/retrospective-ai-2025/">
-    
-
-    <meta property="og:url" content="//localhost:1313/posts/retrospective-ai-2025/">
-  <meta property="og:site_name" content="Elliot Lake">
-  <meta property="og:title" content="5 Months of Professional AI Development : A Retrospective">
-  <meta property="og:description" content="A short debrief on developing with LLMs, Neural Networks and Spacy">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-06-23T16:11:48+01:00">
-    <meta property="article:modified_time" content="2025-06-23T16:11:48+01:00">
-    <meta property="article:tag" content="AI">
-    <meta property="article:tag" content="LLMs">
-
-  <meta itemprop="name" content="5 Months of Professional AI Development : A Retrospective">
-  <meta itemprop="description" content="A short debrief on developing with LLMs, Neural Networks and Spacy">
-  <meta itemprop="datePublished" content="2025-06-23T16:11:48+01:00">
-  <meta itemprop="dateModified" content="2025-06-23T16:11:48+01:00">
-  <meta itemprop="keywords" content="AI,LLMs">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="5 Months of Professional AI Development : A Retrospective">
-  <meta name="twitter:description" content="A short debrief on developing with LLMs, Neural Networks and Spacy">
-
-	
-  </head><body class="ma0 avenir bg-near-white development">
-
-    
-   
   
+  <title>8 Months of Professional AI Development : A Retrospective - Elliot Lake</title>
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l center items-center justify-between">
-    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
-      
-        Elliot Lake
-      
-    </a>
-    <div class="flex-l items-center">
-      
+  
+  <meta name="theme-color" />
 
-      
-      <div class="ananke-socials"></div>
+  <meta name="description" content="At my current workplace, which is critical national infrastructure in the UK, we have been investigating possible uses for LLMs and other AI systems. As a developer with a Graduate Degree in the subject, I have been assigned to investigate possible use cases for the business since the end of January1 this year. Throughout this process, and a not negligible amount of development with LLMs on the side, I have been increasingly less and less convinced by LLMs as something useful outside of very specific contexts, but that they&rsquo;re not completely useless. In particular, I have found working with local LLMs to be a disappointing experience. This may be surprising to some readers, but I have found writing software systems with LLMs as an integral part of their operation to be a generally frustrating experience, even after implementing Prompt Engineering techniques suggested by figures such as Andrew Ng." />
+  <meta name="author" content="Elliot Lake" /><link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
 
-    </div>
+  
+  <link rel="preload" as="image" href="//localhost:1313/theme.png" />
+
+  <link rel="preload" as="image" href="https://avatars.githubusercontent.com/u/4673758?v=4" />
+
+  <link rel="preload" as="image" href="//localhost:1313/github.svg" /><link rel="preload" as="image" href="//localhost:1313/linkedin.svg" /><link rel="preload" as="image" href="//localhost:1313/rss.svg" />
+
+  <script
+    defer
+    src="//localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+
+  
+  <link
+    rel="icon"
+    href="//localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="//localhost:1313/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.147.9">
+</head>
+<body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="//localhost:1313/"
+      >Elliot Lake</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
   </div>
-</nav>
 
-    </div>
-  </header>
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
 
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
 
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
 
-    <main class="pb7" role="main">
-      
-  
-  
-  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked ttu">
-          
-        Posts
-      </aside><div id="sharing" class="mt3 ananke-socials"></div>
-<h1 class="f1 athelas mt3 mb1">5 Months of Professional AI Development : A Retrospective</h1>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2025-06-23T16:11:48+01:00">June 23, 2025</time>
-      
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
 
-      
-      
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><ul class="pa0">
-  
-   <li class="list di">
-     <a href="/tags/ai/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">AI</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/llms/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">LLMs</a>
-   </li>
-  
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  >
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="www.google.com"
+        >CV/Resume</a
+      ><nav
+      class="mt-12 flex justify-center space-x-10 lg:mt-0 lg:items-center ltr:lg:ml-14 rtl:space-x-reverse rtl:lg:mr-14 dark:invert"
+    >
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/TercioOfParma"
+        target="_blank"
+        rel="me"
+      >github</a>
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/elliot-lake-016360132"
+        target="_blank"
+        rel="me"
+      >linkedin</a>
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="//localhost:1313/index.xml"
+        target="_blank"
+        rel="alternate"
+      >rss</a>
+    </nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="my-0! pb-2.5">8 Months of Professional AI Development : A Retrospective</h1><div class="text-xs antialiased opacity-60"><time>Jun 27, 2025</time></div></header>
+
+  <section><p>At my current workplace, which is critical national infrastructure in the UK, we have been investigating possible uses for LLMs and other AI systems. As a developer with a Graduate Degree in the subject, I have been assigned to investigate possible use cases for the business since the end of January<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> this year. Throughout this process, and a not negligible amount of development with LLMs on the side, I have been increasingly less and less convinced by LLMs as something useful outside of very specific contexts, but that they&rsquo;re not completely useless. In particular, I have found working with local LLMs to be a disappointing experience. This may be surprising to some readers, but I have found writing software systems with LLMs as an integral part of their operation to be a generally frustrating experience, even after implementing Prompt Engineering techniques suggested by figures such as Andrew Ng.</p>
+<p>In the interest of conveying information that I think will be less likely known to the reader quickly, I will start by enumerating considerations that I think are less likely to have been addressed explicitly in other places. From there, I&rsquo;ll go through ones that people are much more likely to know but I feel are an important part of the retrospective. Finally, I&rsquo;ll enumerate a list of use cases where I think that LLMs work and don&rsquo;t work and explain how I reached my conclusions.</p>
+<h2 id="legal-considerations-are-extraordinarily-important">Legal Considerations Are Extraordinarily Important</h2>
+<p>One thing that I have not seen touched on very strongly, but is incredibly important, is that LLMs can very easily generate dangerous and avoidable legal problems. For example, while LLMs are considered to be quite effective in summarising texts, there is still a significant chance of either placing the focus of the summary in such a way that it misconstrues its source, or even outright hallucinating details not present in the base text<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. While this would be fine for situations where we want a basic summary of some unimportant article, this becomes extraordinarily problematic if we are using the results of this AI to judge a person or some other vital situation.</p>
+<p>Even in situations where it is lawful to process public personal data in such a way (Which are quite rare inside of the EU or the UK as a result of GDPR or DPA respectively), there is often a legal requirement to be able to defend such judgements. If HR decides to terminate a person on the basis of an LLM&rsquo;s output, how will they be able to defend themselves in court if the LLM has invented a detail or misconstrued a person? What if important details are omitted, such as a person&rsquo;s prior public criminal history? How would a company be able to justify hiring a violent criminal, when they could have reasonably known by googling it, but have decided to rely on an LLM anyway?</p>
+<p>The reader may respond &ldquo;A person can consult multiple sources&rdquo;. This is true, yet I don&rsquo;t think that the culture is here yet for such a thing. There is not an appropriate understanding of these systems in our overarching culture yet. There are many people who think that these systems are some sort of panacea, especially as one goes further up an organisation&rsquo;s hierarchy. Organisations must be aware of this, be aware that they&rsquo;re likely in no position to change this culture, and act accordingly.</p>
+<h2 id="prompts-that-generate-data-can-break-your-program">Prompts That Generate Data Can Break Your Program</h2>
+<p>It has been stated, by Andrew Ng nonetheless, that one way of significantly cutting down issues with data provided to a software system is to specify in a prompt that you would like the desired result in JSON, probably assigned to a variable named in that prompt<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. While this does make any results from an LLM much easier to interpret in the code, one very irritating problem that I have had (at least with local LLMs) is that, despite being told contrary, the LLM still decides to provide commentary on why it has made such a decision occasionally. It ignores instructions send to it, and it does this frequently enough that it must be acknowledged by any software system that handles data from them.</p>
+<h3 id="however-this-can-be-a-strength">However, this can be a strength</h3>
+<p>However, this very indeterminism has some uses. For instance, given how this malformation can occur within requests for JSON, there could be a situation where LLMs are used to generate test data en masse in that format. This would give systems that are being tested the opportunity to occasionally receive curve balls that a team may not have considered, leading to better developed systems.</p>
+<h2 id="llms-at-scale-will-break-very-frequently">LLMs at Scale Will Break Very Frequently</h2>
+<p>The absolute most reliable systems which we have at this moment hallucinate at <a href="https://huggingface.co/spaces/vectara/leaderboard">roughly</a> a rate of 1 in 140 as of time of writing (If we consider this trustworthy). This is slightly more reliable than an ANPR system, which is at about 1 in 100<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>. While this is fine for most prompts, this can compound very quickly if you want to get multiple insights from some text or have multiple layers of LLMs acting on each other. Additionally, multiple users produce the same problem.  Therefore there will be significant errors on a daily basis, and this is before we even consider the aforementioned ignorance of prompt commands.</p>
+<p>This is, in itself, not something that&rsquo;s atypical in software systems. For instance, packets are often subject to damage when transmitted. However, this is, currently, a much more significant problem as it&rsquo;s much slower than sending another packet to send another prompt to an LLM and receive a response. In addition, the result is at least somewhat dependent on the innate structure of the prompt, as all LLMs are reliant on a probability distribution of subsequent possible tokens based on the prior text. If the prior text is the same, the results are going to look the same (especially if the temperature of the LLM is properly set). At time of writing, I&rsquo;m unaware of any patterns for handling erroneous responses from LLMs at scale.<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+<h2 id="local-llms-tend-to-be-ineffective-at-all-but-the-most-common-tasks-and-are-slow">Local LLMs tend to be ineffective at all but the most common tasks and are slow</h2>
+<p>Do you want to translate into a language like Latin? Well, local LLMs are typically a terrible way to go about it. Do you want to perform anything complex in a timely fashion? Well, you&rsquo;d best not be running your instance of Ollama on any standard consumer hardware, because it will be astonishingly slow. Unless I have missed something in my Nvidia GPU settings, even with a 2 year old £1000 gaming system to prompt Deepseek-R1 can take as long as 1 minute to respond when doing so from the REST API built into it. Gemma 3 was much quicker, but when it comes to less common tasks it can make really basic errors. I mentioned earlier Latin, which surprisingly has a rather huge corpus (After all, it dominated western intellectual thought for over 1000 years). Gemma 3 cannot even get the basics of the grammar to work as intended, the sorts of things that are extraordinarily common in that corpus and any 1st year student of the language would be able to tell you within a few weeks of studying it.</p>
+<p>ChatGPT and Claude tend to get this latter use case rather effectively, but they&rsquo;re still not that great.</p>
+<h2 id="niche-tasks-dont-really-work-for-llms">Niche Tasks don&rsquo;t really work for LLMs</h2>
+<p>For example, one day out of curiosity, I wanted to see how ChatGPT would tackle classifying biblical books by their vocabulary difficulty. I&rsquo;ve written a system that does this, looking at the frequency of the words within the biblical corpus and calculating relative difficulty of each book on the basis of this. ChatGPT came out with vastly different, incorrect results.</p>
+<p>Now, I think it&rsquo;s somewhat unreasonable to expect a system that is essentially relying on training data to recall this sort of niche information. However, I think that devs ought to be aware of this short coming when they&rsquo;re trying to outsource these scenarios to an LLM to save time.</p>
+<h2 id="llms-are-extraordinarily-easy-and-quick-to-work-with">LLMs are extraordinarily easy and quick to work with</h2>
+<p>As I am sure almost every single reader here is aware, prompting an LLM is a much easier and more intuitive task than working with code directly much of the time, in particular when it comes to working with domains (Especially inside of Natural Language Processing) which are ill understood or quite complicated to implement. For instance, I was able to save a great deal of development time by having an LLM classify pre-existing data rather than going to the effort of investigating text document classification in a great deal of detail (Lots of work understanding algorithms contemporaneous with GPT-2 such as BERT and similar systems) and implementing these. For instance, I realised fairly early on in the process of developing with LLMs that it was much more time efficient to do this than to handle text classification by training a Neural Network with SpaCy.</p>
+<p>I think a use case, where the result is not critical and the cost of learning a system is very high in terms of cognitive load, LLMs can provide a stopgap which is far easier on the mind.</p>
+<h1 id="use-cases">Use Cases</h1>
+<h2 id="what-i-think-works">What I think works</h2>
+<ul>
+<li>First Drafts</li>
+<li>Mock Frontends which exist purely to give a person an idea of what a website may look like (Sort of like more involved wireframing)</li>
+<li>Generating lots of ideas quickly</li>
+<li>Summarising low importance information</li>
+<li>Generating test data designed to surprise or break your system</li>
+<li>Situations where human text input would be acceptable or necessary</li>
+<li>Where some other format such as JSON is necessary but isn&rsquo;t critical</li>
+<li>When mathematical precision is not necessary</li>
+<li>At times when jobs can run in the background and a user is happy to wait</li>
 </ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
-      </div>
-    </div>
-
-    <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="//localhost:1313/" >
-    &copy;  Elliot Lake 2025 
-  </a>
-    <div><div class="ananke-socials"></div>
+<h2 id="what-i-think-doesnt-work">What I think doesn&rsquo;t work</h2>
+<ul>
+<li>Learning entirely new domains of knowledge (Get a textbook, read it, and memorise it)</li>
+<li>Summarising anything that has relevance to anything legal or you or your company could be liable for</li>
+<li>Anything that requires any level of precision (This includes language translation, I cannot count the amount of times I have wanted to strangle friends of mine for throwing Latin texts at it without knowing Latin)</li>
+<li>Situations where multiple LLMs are reliant on each other (In other words I don&rsquo;t think Agentic systems are generally a good idea)</li>
+<li>Anywhere where retaining data is necessary</li>
+<li>Anywhere where data must be within a set range and absolutely no deviation is tolerable</li>
+<li>Any system which is required to be quick</li>
+</ul>
+<h2 id="how-did-i-come-to-these-conclusions">How did I come to these conclusions?</h2>
+<p>I have used LLMs significantly in the following contexts professionally and experimenting with them in off hours:</p>
+<ul>
+<li>Classifying large amounts of documents into a discrete set of categories to determine levels of danger for certain incidents</li>
+<li>Ranking documents on the basis of different criteria relevant to my work place</li>
+<li>Summarising documents from the internet</li>
+<li>Producing text to provide context for learning vocabulary in foreign languages</li>
+<li>Producing first drafts for code and text</li>
+</ul>
+<p>As for where I am approaching this from, I have been programming for about 14 years (I.E. since I was 13), but only in a professional setting for roughly the past 4 years. This hobbyist experience was mostly with C and working with lower level systems and games, while my professional experience has been almost entirely writing web applications, with a short 3 month stint working with AI. Therefore, many of these observations may have emerged from my own lack of experience. In this world of noise around LLMs, let the reader experiment himself and take everything that he reads with a pinch of salt.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The additional three months comes from an AI startup I worked for before my current role&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>The idea that this hallucination problem can be entirely eliminated, I think, is absurd&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>This latter detail is added by me&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>This is also, as an aside, why I think using an LLM as a starting point to learn anything you&rsquo;re not familiar with is a terrible idea. You have no prior experience, how will you know you&rsquo;re not being sent down the garden path, even if you have other sources?&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>A couple of approaches could involve 1) Shuffling a list if a list of items is involved or 2) Alternative prompts with the same result&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
 </div>
-  </div>
-</footer>
+</section>
 
-  </body>
+  <footer class="mt-12 flex flex-wrap"><a
+      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="//localhost:1313/tags/ai"
+      >AI</a
+    ><a
+      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="//localhost:1313/tags/llms"
+      >LLMs</a
+    ></footer></article></main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2025
+    <a class="link" href="//localhost:1313/">Elliot Lake</a></div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+</body>
 </html>
