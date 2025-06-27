@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resume on Elliot Lake</title>
-    <link>//localhost:1313/tags/resume/</link>
+    <link>http://localhost:1313/tags/resume/</link>
     <description>Recent content in Resume on Elliot Lake</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 27 Jun 2025 17:38:39 +0100</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/resume/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/resume/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CV/Resume</title>
-      <link>//localhost:1313/posts/cv-resume/</link>
+      <link>http://localhost:1313/posts/cv-resume/</link>
       <pubDate>Fri, 27 Jun 2025 17:38:39 +0100</pubDate>
-      <guid>//localhost:1313/posts/cv-resume/</guid>
+      <guid>http://localhost:1313/posts/cv-resume/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1MTJUB6dH2YeE5yYTrMPD4K5axNSXbT_B/view?usp=sharing&#34;&gt;Here is my CV or Resume&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,5 +1,5 @@
 theme = 'paper'
-baseURL = "elliotlake.xyz"
+baseURL = "https://elliotlake.xyz"
 relativeURLs = true
 
 [languages]
