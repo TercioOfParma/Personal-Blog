@@ -6,11 +6,11 @@ featured_image: ""
 description: "A short debrief on developing with LLMs, Neural Networks and Spacy"
 ---
 
-# 5 Months of Professional AI Development : A Retrospective *In Progress*
+# 5 Months of Professional AI Development : A Retrospective
 
 At my current workplace, which is critical naval infrastructure in the UK, we have been investigating possible uses for LLMs and other AI systems in our work. As a developer with a Graduate Degree in the subject, I was assigned to investigate possible use cases for the business. Throughout this process, and a not negligible amount of development with LLMs on the side, I have been increasingly less and less convinced by LLMs as something useful outside of very specific contexts. I have found this to be particularly true for local LLMs running on Ollama. This may be surprising to some readers, but I have found writing software systems with LLMs as an integral part of them to be a generally frustrating experience, even after implementing Prompt Engineering techniques suggested by figures such as Andrew Ng. 
 
-In the interest of conveying information that I think will be less likely known to the reader quickly, I will start by enumerating considerations that I think are less likely to have been addressed explicitly in other places.
+In the interest of conveying information that I think will be less likely known to the reader quickly, I will start by enumerating considerations that I think are less likely to have been addressed explicitly in other places. From there, I'll go through ones that people are much more likely to know but I feel are an important part of the retrospective. Finally, I'll enumerate a list of use cases where I think that LLMs work and don't work and explain how I reached my conclusions. 
 
 ## Legal Considerations Are Extraordinarily Important
 
@@ -26,13 +26,57 @@ It has been stated, by Andrew Ng nonetheless, that one way of significantly cutt
 
 This means that it's paramount that all LLM output has significant preprocessing to remove such unprompted details. LLM output should never ever be treated as reliable or devoid of fault, because if you do not do this your program could break. 
 
+### However, this can be a strength
+
+However, I can see this very indeterminism having some uses. For instance, given how this malformation can occur within requests for JSON, there could be a situation where LLMs are used to generate test data en masse in that format. This would give systems that are being tested the opportunity to occasionally receive curve balls that a team may not have considered. 
+
 ## LLMs at Scale Will Break Very Frequently
 
-The absolute most reliable systems which we have at this moment hallucinate at [roughly](https://huggingface.co/spaces/vectara/leaderboard) a rate of 1 in 140 as of time of writing. This is slightly more reliable than an ANPR system, which is at about 1 in 100. While this is fine for most prompts, this can compound very quickly if you want to get multiple insights from some text or have multiple layers of LLMs acting on each other. Multiple users produce the same problem.  Therefore there should be significant errors on a daily basis, and this is before we even consider the aforementioned ignorance of prompt commands. 
+The absolute most reliable systems which we have at this moment hallucinate at [roughly](https://huggingface.co/spaces/vectara/leaderboard) a rate of 1 in 140 as of time of writing. This is slightly more reliable than an ANPR system, which is at about 1 in 100[^3]. While this is fine for most prompts, this can compound very quickly if you want to get multiple insights from some text or have multiple layers of LLMs acting on each other. Multiple users produce the same problem.  Therefore there should be significant errors on a daily basis, and this is before we even consider the aforementioned ignorance of prompt commands. 
 
-This is, in itself, not something that's atypical in software systems. Packets lose details along a wire, for instance. However, this is, currently, a much more significant problem as it's much slower than sending another packet and the result is at least somewhat dependent on the innate structure of the prompt. At time of writing, I'm unaware of any patterns for handling this currently[^3].
+This is, in itself, not something that's atypical in software systems. Packets lose details along a wire, for instance. However, this is, currently, a much more significant problem as it's much slower than sending another packet to send another prompt to an LLM and receive a response. Also, the result is at least somewhat dependent on the innate structure of the prompt, as all LLMs are reliant on a probability distribution of subsequent possible tokens based on the prior text. If the prior text is the same, the results are going to look the same (especially if the temperature of the LLM is properly set). At time of writing, I'm unaware of any patterns for handling this[^4].
 
+## Local LLMs tend to be ineffective at all but the most common tasks and slow
 
+Do you want to translate into a language like Latin? Well, local LLMs are typically a terrible way to go about it. Do you want to perform anything complex in a timely fashion? Well, you'd best not be running your instance of Ollama on any standard consumer hardware, because it will be astonishingly slow. Unless I have missed something in my Nvidia GPU settings, even with a 2 year old £1000 gaming system to prompt Deepseek-R1 can take as long as 1 minute to respond when doing so from the REST API built into it. Gemma 3 was much quicker, but when it comes to less common tasks it can make really basic errors. I mentioned earlier Latin, which surprisingly has a rather huge corpus (After all, it dominated western intellectual thought for over 1000 years). Gemma 3 cannot even get the basics of the grammar to work as intended, the sorts of things that are extraordinarily common in that corpus and any 1st year student of the language would be able to tell you within a few weeks of studying it. 
+
+ChatGPT and Claude tend to get this latter use case rather effectively, but they're still not that great.
+
+## Niche Tasks don't really work for LLMs
+
+For example, one day out of curiosity, I wanted to see how ChatGPT would tackle classifying biblical books by their vocabulary difficulty. I've written a system that does this, looking at the frequency of the words within the biblical corpus and calculating relative difficulty of each book on the basis of this. ChatGPT came out with vastly different, incorrect results. 
+
+Now, I think it's somewhat unreasonable to expect a system that is essentially relying on training data to recall this sort of niche information. However, I think that devs ought to be aware of this short coming when they're trying to outsource these scenarios to an LLM to save time. 
+
+## LLMs are extraordinarily easy to work with
+
+As I am sure almost every single reader here is aware, prompting an LLM is a much easier and more intuitive task than working with code directly much of the time, in particular when it comes to working with domains (Especially inside of Natural Language Processing) which are ill understood or quite complicated to implement. For instance, I was able to save a great deal of development time by having an LLM classify pre-existing data rather than going to the effort of investigating text document classification in a great deal of detail (Lots of work understanding algorithms contemporaneous with GPT-2 such as BERT and similar systems) and implementing these. For instance, I realised fairly early on in the process of developing with LLMs that it was much more time efficient to do this than to handle text classification by training a Neural Network with SpaCy. 
+
+I think a use case, where the result is not critical and the cost of learning a system is very high in terms of cognitive load, LLMs can provide a stopgap which is far easier on the mind. 
+
+# Use Cases
+
+## What I think works
+
+- First Drafts
+- Mock Frontends which exist purely to give a person an idea of what a website may look like (Sort of like more involved wireframing)
+- Generating lots of ideas quickly
+- Summarising low importance information
+- Generating test data designed to surprise or break your system
+- Situations where human text input would be acceptable or necessary
+- Where some other format such as JSON is necessary but isn't critical
+- When mathematical precision is not necessary
+- At times when jobs can run in the background and a user is happy to wait
+
+## What I think doesn't work
+
+- Learning entirely new domains of knowledge (Get a textbook, read it, and memorise it)
+- Summarising anything that has relevance to anything legal or you or your company could be liable for
+- Anything that requires any level of precision (This includes language translation, I cannot count the amount of times I have wanted to strangle friends of mine for throwing Latin texts at it without knowing Latin)
+- Situations where multiple LLMs are reliant on each other (In other words I don't think Agentic systems are generally a good idea)
+- Anywhere where retaining data is necessary
+- Anywhere where data must be within a set range and absolutely no deviation is tolerable
+- Any system which is required to be quick
 
 
 
@@ -43,7 +87,7 @@ Although this may not be in the interest of any reader who just wishes for a qui
 I have used LLMs significantly in the following contexts:
 
 - Classifying large amounts of documents into a discrete set of categories to determine levels of danger for certain incidents
-- Ranking documents on the basis of different criteria such as levels of violence present in a text
+- Ranking documents on the basis of different criteria relevant to my work place
 - Summarising documents from the internet
 - Producing text to provide context for learning vocabulary in foreign languages
 - Producing first drafts for code and text
@@ -56,5 +100,6 @@ As for where I am approaching this from, I have been programming for about 14 ye
 
 [^1]: The idea that this hallucination problem can be entirely eliminated, I think, is absurd
 [^2]: This latter detail is added by me
-[^3]: A couple of approaches could involve 1) Shuffling a list if a list of items is involved or 2) Alternative prompts with the same result 
+[^3]: This is also, as an aside, why I think using an LLM as a starting point to learn anything you're not familiar with is a terrible idea. You have no prior experience, how will you know you're not being sent down the garden path, even if you have other sources?
+[^4]: A couple of approaches could involve 1) Shuffling a list if a list of items is involved or 2) Alternative prompts with the same result 
 
